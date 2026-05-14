@@ -1,4 +1,4 @@
-# ⚡ Análise Integrada de Dados Climáticos e Elétricos no Brasil
+# Análise Integrada de Dados Climáticos e Elétricos no Brasil
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -8,11 +8,11 @@
 > Projeto de Big Data Analytics — PUC Minas · Eixo 4 · 2026/1  
 > Curso de Tecnologia em Banco de Dados
 
-### 🚀 [CLIQUE AQUI PARA ACESSAR O GUIA PASSO A PASSO DE EXECUÇÃO DO PROJETO](./instrucoes_execucao.md)
+### [Clique aqui para acessar o guia passo a passo de replicação do projeto](./instrucoes_replicacao_projeto.md)
 
 ---
 
-## 📖 Resumo do Projeto
+## Resumo do Projeto
 
 O objetivo deste projeto é analisar o impacto das variáveis climáticas (precipitação, vento, temperatura e radiação solar) na geração de energia (hidrelétrica, eólica, solar e térmica) e na demanda/carga do Sistema Elétrico Brasileiro.
 
@@ -37,7 +37,7 @@ O recorte temporal da análise abrange **9 anos (2016 a 2024)**.
 
 ---
 
-## 🏗️ Arquitetura de Dados
+## Arquitetura de Dados
 
 O pipeline foi projetado para contornar limitações severas de hardware e custos do ambiente acadêmico AWS Learner Lab. O projeto segue a **Medallion Architecture** (Bronze → Silver → Gold), hospedada integralmente na AWS.
 

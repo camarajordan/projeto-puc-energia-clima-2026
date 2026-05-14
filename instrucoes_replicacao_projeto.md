@@ -1,4 +1,4 @@
-# Guia de Execução (Passo a Passo)
+# Guia de Replicação (Passo a Passo)
 
 Este documento contém as instruções para replicar a infraestrutura e executar o pipeline de dados na AWS.
 
