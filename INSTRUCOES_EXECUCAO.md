@@ -72,12 +72,3 @@ python3 orquestrador_gold.py
 
 O script executa as queries SQL no Athena, respeitando a ordem de dependências do modelo.
 
----
-
-## 5. Conexão com o Microsoft Power BI
-
-1. Abra o Power BI Desktop.
-2. Acesse Obter Dados > Mais... > Amazon Athena.
-3. Configure a região da sua conta AWS.
-4. Informe as credenciais de acesso da AWS conforme o ambiente que estiver usando.
-5. Selecione o banco de dados e importe as tabelas da camada Gold para iniciar os dashboards.
