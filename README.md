@@ -62,7 +62,7 @@ O pipeline foi projetado para contornar limitações severas de hardware e custo
 		       │
 		       ▼
 	      ┌─────────────────────┐
-	      │       GOLD          │  orquestrador_gold.py
+	      │       GOLD          │  backfill_carga_historica.py
 	      │  (Amazon Athena)    │  Star Schema — 10 tabelas
 	      │  Star Schema        │  Dims + Fatos (2016–2024)
 	      └────────┬────────────┘
@@ -86,8 +86,8 @@ Job PySpark no AWS Glue adotando a estratégia *Lean Silver* (filtrando apenas c
 - Agregação dos dados horários climáticos para granularidade diária.
 - Armazenamento em Parquet (compressão Snappy), particionado por `year=/month=/`.
 
-### 🥇 3. Gold — Modelo Analítico (`gold/orquestrador_gold.py`)
-Orquestrador Python que executa os 10 scripts SQL no Amazon Athena, construindo o **Star Schema**.
+### 🥇 3. Gold — Modelo Analítico (`gold/backfill_carga_historica.py`)
+Script de Automação de Carga Histórica (Backfill) Python que executa os 10 scripts SQL no Amazon Athena, construindo o **Star Schema**.
 - **Estratégia:** Para contornar o limite de 100 partições concorrentes do Athena, aplicou-se o padrão *Subquery Wrapper* usando `CTAS` para o ano base de 2016, seguido de `INSERT INTO` iterativos para os anos subsequentes.
 - O resultado é um modelo composto por Dimensões (Tempo, Localização, Usina) e Fatos (Clima, Geração, Hidrologia, Carga e Eficiência).
 

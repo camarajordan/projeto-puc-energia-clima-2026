@@ -62,12 +62,12 @@ Os arquivos Parquet serão salvos no S3 nas pastas raw da camada Bronze.
 
 ## 4. Execução da Camada Gold (Modelo Dimensional Athena)
 
-1. Faça o upload dos arquivos `.sql` da pasta `gold/scripts/` para o S3, se o seu orquestrador exigir leitura remota.
-2. Faça o upload do orquestrador `gold/orquestrador_gold.py` para o AWS CloudShell.
-3. Execute o orquestrador:
+1. Faça o upload dos arquivos `.sql` da pasta `gold/scripts/` para o S3, se o seu script exigir leitura remota.
+2. Faça o upload do script de backfill `gold/backfill_carga_historica.py` para o AWS CloudShell.
+3. Execute o script de backfill:
 
 ```bash
-python3 orquestrador_gold.py
+python3 backfill_carga_historica.py
 ```
 
 O script executa as queries SQL no Athena, respeitando a ordem de dependências do modelo.
