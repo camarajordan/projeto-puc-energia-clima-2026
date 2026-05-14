@@ -1,0 +1,115 @@
+{
+    "titulo": "Dicionario INMET Microdados",
+    "campos": [
+        {
+            "codigo": "ano",
+            "tipo": "INTEGER",
+            "descricao": "Ano"
+        },
+        {
+            "codigo": "mes",
+            "tipo": "INTEGER",
+            "descricao": null
+        },
+        {
+            "codigo": "data",
+            "tipo": "DATE",
+            "descricao": "Data"
+        },
+        {
+            "codigo": "hora",
+            "tipo": "TIME",
+            "descricao": "Hora (UTC)"
+        },
+        {
+            "codigo": "id_estacao",
+            "tipo": "STRING",
+            "descricao": "ID da estação meteorológica"
+        },
+        {
+            "codigo": "precipitacao_total",
+            "tipo": "FLOAT",
+            "descricao": "Precipitação total, horária"
+        },
+        {
+            "codigo": "pressao_atm_hora",
+            "tipo": "FLOAT",
+            "descricao": "Pressão atmosférica ao nível da estação, horária"
+        },
+        {
+            "codigo": "pressao_atm_max",
+            "tipo": "FLOAT",
+            "descricao": "Pressão atmosférica máxima ao nível da estação, na hora anterior"
+        },
+        {
+            "codigo": "pressao_atm_min",
+            "tipo": "FLOAT",
+            "descricao": "Pressão atmosférica mínima ao nível da estação, na hora anterior"
+        },
+        {
+            "codigo": "radiacao_global",
+            "tipo": "FLOAT",
+            "descricao": "Radiação global"
+        },
+        {
+            "codigo": "temperatura_bulbo_hora",
+            "tipo": "FLOAT",
+            "descricao": "Temperatura do ar - bulbo seco, horária"
+        },
+        {
+            "codigo": "temperatura_orvalho_hora",
+            "tipo": "FLOAT",
+            "descricao": "Temperatura do ponto de orvalho, horária"
+        },
+        {
+            "codigo": "temperatura_max",
+            "tipo": "FLOAT",
+            "descricao": "Temperatura máxima, hora anterior"
+        },
+        {
+            "codigo": "temperatura_min",
+            "tipo": "FLOAT",
+            "descricao": "Temperatura mínima, hora anterior"
+        },
+        {
+            "codigo": "temperatura_orvalho_max",
+            "tipo": "FLOAT",
+            "descricao": "Temperatura de orvalho máxima, hora anterior"
+        },
+        {
+            "codigo": "temperatura_orvalho_min",
+            "tipo": "FLOAT",
+            "descricao": "Temperatura de orvalho mínima, hora anterior"
+        },
+        {
+            "codigo": "umidade_rel_max",
+            "tipo": "FLOAT",
+            "descricao": "Umidade relativa máxima, hora anterior"
+        },
+        {
+            "codigo": "umidade_rel_min",
+            "tipo": "FLOAT",
+            "descricao": "Umidade relativa mínima, hora anterior"
+        },
+        {
+            "codigo": "umidade_rel_hora",
+            "tipo": "FLOAT",
+            "descricao": "Umidade relativa, horária"
+        },
+        {
+            "codigo": "vento_direcao",
+            "tipo": "FLOAT",
+            "descricao": "Direção do vento"
+        },
+        {
+            "codigo": "vento_rajada_max",
+            "tipo": "FLOAT",
+            "descricao": "Vento, rajada máxima"
+        },
+        {
+            "codigo": "vento_velocidade",
+            "tipo": "FLOAT",
+            "descricao": "Vento, velocidade horária"
+        }
+    ]
+}

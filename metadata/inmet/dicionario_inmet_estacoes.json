@@ -1,0 +1,50 @@
+{
+    "titulo": "Dicionario INMET Estacoes",
+    "campos": [
+        {
+            "codigo": "id_estacao",
+            "tipo": "STRING",
+            "descricao": "ID da estação meteorológica"
+        },
+        {
+            "codigo": "id_municipio",
+            "tipo": "STRING",
+            "descricao": "Código IBGE do município"
+        },
+        {
+            "codigo": "nome",
+            "tipo": "STRING",
+            "descricao": "Nome da estação"
+        },
+        {
+            "codigo": "data_fundacao",
+            "tipo": "DATE",
+            "descricao": "Data de fundação"
+        },
+        {
+            "codigo": "latitude",
+            "tipo": "FLOAT",
+            "descricao": "Latitude"
+        },
+        {
+            "codigo": "longitude",
+            "tipo": "FLOAT",
+            "descricao": "Longitude"
+        },
+        {
+            "codigo": "altitude",
+            "tipo": "FLOAT",
+            "descricao": "Altitude"
+        },
+        {
+            "codigo": "id_regiao",
+            "tipo": "STRING",
+            "descricao": "Sigla da região"
+        },
+        {
+            "codigo": "sigla_uf",
+            "tipo": "STRING",
+            "descricao": "Sigla da UF"
+        }
+    ]
+}

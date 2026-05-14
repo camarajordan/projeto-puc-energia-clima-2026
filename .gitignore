@@ -1,0 +1,12 @@
+﻿# Credenciais e segredos
+*.pem
+*.key
+.env
+*.env
+myb2bapp-405901-fee9b119d4d9.json
+# Python
+__pycache__/
+*.pyc
+# Sistema
+.DS_Store
+Thumbs.db

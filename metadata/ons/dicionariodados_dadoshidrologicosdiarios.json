@@ -1,0 +1,105 @@
+{
+	"titulo": "DicionarioDados_DadosHidrologicosDiarios",
+	"dicionario_simplificado": [
+		{
+			"descricao": "Identificador do subsistema",
+			"codigo": "id_subsistema"
+		},
+		{
+			"descricao": "Nome do subsistema",
+			"codigo": "nom_subsistema"
+		},
+		{
+			"descricao": "Tipo do reservatório",
+			"codigo": "tip_reservatorio"
+		},
+		{
+			"descricao": "Nome da bacia em que o reservatório está localizado",
+			"codigo": "nom_bacia"
+		},
+		{
+			"descricao": "Nome do reservatório equivalente de energia do reservatório",
+			"codigo": "nom_ree"
+		},
+		{
+			"descricao": "Identificador do reservatório",
+			"codigo": "id_reservatorio"
+		},
+		{
+			"descricao": "Nome do reservatório",
+			"codigo": "nom_reservatorio"
+		},
+		{
+			"descricao": "Ordem do reservatório na cascata",
+			"codigo": "num_ordemcs"
+		},
+		{
+			"descricao": "Código da usina nos modelos de otimização",
+			"codigo": "cod_usina"
+		},
+		{
+			"descricao": "Data",
+			"codigo": "din_instante"
+		},
+		{
+			"descricao": "Valor do nível montante, em metros",
+			"codigo": "val_nivelmontante"
+		},
+		{
+			"descricao": "Valor do nível jusante, em metros",
+			"codigo": "val_niveljusante"
+		},
+		{
+			"descricao": "Valor do volume útil consistido (%)",
+			"codigo": "val_volumeutilcon"
+		},
+		{
+			"descricao": "Vazão afluente em m3/s",
+			"codigo": "val_vazaoafluente"
+		},
+		{
+			"descricao": "Vazão turbinada, em m3/s",
+			"codigo": "val_vazaoturbinada"
+		},
+		{
+			"descricao": "Vazão vertida, em m3/s",
+			"codigo": "val_vazaovertida"
+		},
+		{
+			"descricao": "Vazão de outras estruturadas, em m3/s",
+			"codigo": "val_vazaooutrasestruturas"
+		},
+		{
+			"descricao": "Vazão defluente, em m3/s",
+			"codigo": "val_vazaodefluente"
+		},
+		{
+			"descricao": "Vazão transferida, em m3/s",
+			"codigo": "val_vazaotransferida"
+		},
+		{
+			"descricao": "Vazão natural, em m3/s",
+			"codigo": "val_vazaonatural"
+		},
+		{
+			"descricao": "Vazão artificial, em m3/s",
+			"codigo": "val_vazaoartificial"
+		},
+		{
+			"descricao": "Vazão incremental, em m3/s",
+			"codigo": "val_vazaoincremental"
+		},
+		{
+			"descricao": "Vazão de evaporação líquida, em m3/s",
+			"codigo": "val_vazaoevaporacaoliquida"
+		},
+		{
+			"descricao": "Vazão de uso consuntivo, em m3/s",
+			"codigo": "val_vazaousoconsuntivo"
+		},
+		{
+			"descricao": "Vazão incremental bruta, em m3/s",
+			"codigo": "val_vazaoincrementalbruta"
+		}
+	]
+}

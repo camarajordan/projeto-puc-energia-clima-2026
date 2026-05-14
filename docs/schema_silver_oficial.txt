@@ -1,0 +1,137 @@
+ESQUEMA DO BANCO DE DADOS: db_energia_clima_puc
+==================================================
+
+Tabela: silver_capacidade_geracao
+----------------------------------------
+  id_subsistema : string
+  nom_subsistema : string
+  id_estado : string
+  nom_estado : string
+  nom_tipousina : string
+  nom_usina : string
+  ceg : string
+  nom_modalidadeoperacao : string
+  val_potenciaefetiva : double
+  dat_entradaoperacao : string
+  dat_desativacao : string
+
+==================================================
+
+Tabela: silver_carga_energia_di
+----------------------------------------
+  id_subsistema : string
+  nom_subsistema : string
+  val_cargaenergiamwmed : double
+  event_date : date
+
+  -- Colunas de Partição --
+  year : string (Particionado)
+  month : string (Particionado)
+
+==================================================
+
+Tabela: silver_dados_hidrologicos_di
+----------------------------------------
+  id_reservatorio : string
+  nom_reservatorio : string
+  nom_bacia : string
+  nom_subsistema : string
+  nom_ree : string
+  tip_reservatorio : string
+  num_ordemcs : double
+  cod_usina : double
+  val_nivelmontante : double
+  val_niveljusante : double
+  val_volumeutilcon : double
+  val_vazaoafluente : double
+  val_vazaoturbinada : double
+  val_vazaovertida : double
+  val_vazaooutrasestruturas : double
+  val_vazaodefluente : double
+  val_vazaotransferida : double
+  val_vazaonatural : double
+  val_vazaoartificial : double
+  val_vazaoincremental : double
+  val_vazaoevaporacaoliquida : double
+  val_vazaousoconsuntivo : double
+  event_date : date
+
+  -- Colunas de Partição --
+  year : string (Particionado)
+  month : string (Particionado)
+
+==================================================
+
+Tabela: silver_diretorios_brasil
+----------------------------------------
+  id_municipio : int
+  nome : string
+  sigla_uf : string
+  nome_uf : string
+  nome_regiao : string
+
+  -- Colunas de Partição --
+  partition_0 : string (Particionado)
+
+==================================================
+
+Tabela: silver_estacoes
+----------------------------------------
+  id_estacao : string
+  id_municipio : int
+  estacao : string
+  data_fundacao : date
+  latitude : double
+  longitude : double
+  altitude : double
+
+==================================================
+
+Tabela: silver_geracao_usina_2_ho
+----------------------------------------
+  event_date : date
+  id_subsistema : string
+  nom_subsistema : string
+  id_estado : string
+  nom_estado : string
+  nom_tipousina : string
+  val_geracao_total_mwmed : double
+  qtd_usinas_ativas : bigint
+
+  -- Colunas de Partição --
+  year : string (Particionado)
+  month : string (Particionado)
+
+==================================================
+
+Tabela: silver_microdados
+----------------------------------------
+  id_estacao : string
+  event_date : date
+  precipitacao_total : double
+  radiacao_global : double
+  temperatura_media : double
+  temperatura_maxima : double
+  temperatura_minima : double
+  vento_velocidade_media : double
+  timezone : string
+
+  -- Colunas de Partição --
+  year : string (Particionado)
+  month : string (Particionado)
+
+==================================================
+
+Tabela: silver_modalidade_usina
+----------------------------------------
+  nom_usina : string
+  ceg : string
+  id_ons : string
+  nom_modalidadeoperacao : string
+  val_potenciaautorizada : double
+  id_estado : string
+  nom_estado : string
+  sts_aneel : string
+
+==================================================
+
