@@ -66,24 +66,9 @@ Historico de passos manuais identificados:
 
 Para facilitar replicacao, estes passos podem ser feitos via CloudShell.
 
-## Bootstrap CloudShell (AWS)
+## Preparação manual (S3 + Athena)
 
-Script pronto no repositorio:
-
-- scripts/bootstrap_cloudshell_aws.sh
-
-Ele faz:
-
-- Cria bucket projeto-puc-energia-clima-2026 (se nao existir)
-- Cria pasta de resultados do Athena no bucket
-- Cria database db_energia_clima_puc no Athena
-
-Uso:
-
-```bash
-chmod +x scripts/bootstrap_cloudshell_aws.sh
-./scripts/bootstrap_cloudshell_aws.sh
-```
+Observação: prepare manualmente o bucket S3 e o database do Athena no ambiente onde vai executar o pipeline (por exemplo, CloudShell). O repositório inclui um script opcional `scripts/bootstrap_cloudshell_aws.sh`, mas não é obrigatório.
 
 ## Ordem de execucao
 
