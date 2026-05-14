@@ -44,7 +44,7 @@ Os arquivos Parquet serão salvos no S3 nas pastas raw da camada Bronze.
 
 1. No console da AWS, busque por AWS Glue e acesse ETL jobs.
 2. Clique em Script editor, selecione a engine Spark e crie o job.
-3. Copie o conteúdo de `silver/silver_glue_final.py` e cole no editor.
+3. Copie o conteúdo de `silver/silver_glue.py` e cole no editor.
 4. Na aba Job details, configure:
    - IAM Role: `LabRole`
    - Worker type: `G 1X`

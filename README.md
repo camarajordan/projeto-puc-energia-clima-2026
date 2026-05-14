@@ -8,7 +8,7 @@
 > Projeto de Big Data Analytics — PUC Minas · Eixo 4 · 2026/1  
 > Curso de Tecnologia em Banco de Dados
 
-### 🚀 [CLIQUE AQUI PARA ACESSAR O GUIA PASSO A PASSO DE EXECUÇÃO DO PROJETO](./INSTRUCOES_EXECUCAO.md)
+### 🚀 [CLIQUE AQUI PARA ACESSAR O GUIA PASSO A PASSO DE EXECUÇÃO DO PROJETO](./instrucoes_execucao.md)
 
 ---
 
@@ -55,7 +55,7 @@ O pipeline foi projetado para contornar limitações severas de hardware e custo
 		       │
 		       ▼
 	      ┌─────────────────┐
-	      │     SILVER      │  silver_glue_final.py
+			  │     SILVER      │  silver_glue.py
 	      │  (AWS Glue /    │  Limpeza, tipagem e joins
 	      │   Amazon S3)    │  Particionado por year/month
 	      └────────┬────────┘
@@ -78,7 +78,7 @@ O pipeline foi projetado para contornar limitações severas de hardware e custo
 - **INMET:** Estratégia *Multi-Cloud*. Os dados (12+ GB) são consultados no Google BigQuery e convertidos para Parquet utilizando **In-Memory Streaming** direto para o S3. *Isso foi feito para contornar o limite restrito de 1GB de disco do AWS CloudShell e evitar o encerramento forçado (`Killed`) do processo por falta de memória RAM.*
 - **Governança:** Geração dinâmica de dicionários de dados (JSON) a partir dos schemas de origem.
 
-### 🥈 2. Silver — Transformação (`silver/silver_glue_final.py`)
+### 🥈 2. Silver — Transformação (`silver/silver_glue.py`)
 Job PySpark no AWS Glue adotando a estratégia *Lean Silver* (filtrando apenas colunas essenciais para otimizar custo e performance).
 - Conversão do padrão decimal brasileiro (vírgula → ponto) e tratamento de nulos.
 - Normalização de tipos incompatíveis do BigQuery (ex: `TIME` → `STRING`).
