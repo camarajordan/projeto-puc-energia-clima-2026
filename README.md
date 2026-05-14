@@ -8,11 +8,11 @@
 > Projeto de Big Data Analytics — PUC Minas · Eixo 4 · 2026/1  
 > Curso de Tecnologia em Banco de Dados
 
-### [Clique aqui para acessar o guia passo a passo de replicação do projeto](./instrucoes_replicacao_projeto.md)
+### 🚀 [Clique aqui para acessar o guia passo a passo de replicação do projeto](./instrucoes_replicacao_projeto.md)
 
 ---
 
-## Resumo do Projeto
+## 📖 Resumo do Projeto
 
 O objetivo deste projeto é analisar o impacto das variáveis climáticas (precipitação, vento, temperatura e radiação solar) na geração de energia (hidrelétrica, eólica, solar e térmica) e na demanda/carga do Sistema Elétrico Brasileiro.
 
@@ -27,7 +27,7 @@ O cliente fictício é o **Operador Nacional do Sistema Elétrico (ONS)**, e a q
 
 O recorte temporal da análise abrange **9 anos (2016 a 2024)**.
 
-### 📖 Fontes de Dados
+### Fontes de Dados
 
 | Fonte | Tipo | Dados |
 |-------|------|-------|
@@ -73,7 +73,7 @@ O pipeline foi projetado para contornar limitações severas de hardware e custo
 	       └───────────────┘
 ```
 
-### 🚀 🥉 1. Bronze — Ingestão (`bronze/ingestao.py`)
+### 🥉 1. Bronze — Ingestão (`bronze/ingestao.py`)
 - **ONS:** Cópia direta entre buckets S3 (nuvem a nuvem).
 - **INMET:** Estratégia *Multi-Cloud*. Os dados (12+ GB) são consultados no Google BigQuery e convertidos para Parquet utilizando **In-Memory Streaming** direto para o S3. *Isso foi feito para contornar o limite restrito de 1GB de disco do AWS CloudShell e evitar o encerramento forçado (`Killed`) do processo por falta de memória RAM.*
 - **Governança:** Geração dinâmica de dicionários de dados (JSON) a partir dos schemas de origem.
