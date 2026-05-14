@@ -36,7 +36,7 @@ logger = logging.getLogger(__name__)
 # - As credenciais do GCP são fornecidas via variável de ambiente
 # - O cliente S3 (`boto3`) opera sobre o bucket de destino definido abaixo
 # ---------------------------------------------------------------------------
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "myb2bapp-405901-fee9b119d4d9.json"
+GCP_CREDENTIALS_ENV = "GOOGLE_APPLICATION_CREDENTIALS"
 
 s3 = boto3.client('s3')
 BUCKET_DESTINO = 'projeto-puc-energia-clima-2026'
@@ -65,6 +65,24 @@ ONS_PREFIXOS_BRONZE = [
 
 # Filtra apenas arquivos que tenham anos dentro do intervalo desejado (inclusive)
 ALLOWED_YEARS = set(range(2016, 2025))
+
+
+def validar_credenciais_gcp():
+    """Valida credenciais do BigQuery via variável de ambiente."""
+    cred_path = os.getenv(GCP_CREDENTIALS_ENV)
+    if not cred_path:
+        raise RuntimeError(
+            f"Variável de ambiente {GCP_CREDENTIALS_ENV} não definida. "
+            "Configure o caminho do arquivo JSON da sua Service Account antes de executar."
+        )
+
+    if not os.path.isfile(cred_path):
+        raise RuntimeError(
+            f"Arquivo de credencial não encontrado em: {cred_path}. "
+            "Verifique o caminho informado em GOOGLE_APPLICATION_CREDENTIALS."
+        )
+
+    return cred_path
 
 # ==========================================
 # FUNÇÃO AUXILIAR: IDEMPOTÊNCIA
@@ -126,6 +144,8 @@ def copiar_prefixo_parquet_ons(bucket_origem, prefix_origem, prefix_destino_base
 def executar_ingestao_full_bronze():
     # erros_pipeline é local para evitar que múltiplas execuções na mesma sessão acumulem erros
     erros_pipeline = []
+    cred_path = validar_credenciais_gcp()
+    logger.info(f"Credencial GCP detectada em: {cred_path}")
     bq_client = bigquery.Client()
     
     # ---------------------------------------------------------
