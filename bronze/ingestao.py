@@ -39,7 +39,7 @@ logger = logging.getLogger(__name__)
 GCP_CREDENTIALS_ENV = "GOOGLE_APPLICATION_CREDENTIALS"
 
 s3 = boto3.client('s3')
-BUCKET_DESTINO = 'projeto-puc-energia-clima-2026'
+BUCKET_DESTINO = 'projeto-puc-energia-clima-2026-v2'  # Substitua pelo nome do seu bucket S3 de destino
 
 # S3 - caminhos e convenções
 # Observação: usamos lowercase consistente para facilitar integração com crawlers e query engines
