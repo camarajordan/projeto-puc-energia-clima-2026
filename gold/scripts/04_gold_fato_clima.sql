@@ -5,7 +5,7 @@ CREATE TABLE db_energia_clima_puc.gold_fato_clima
 WITH (
     format               = 'PARQUET',
     parquet_compression = 'SNAPPY',
-    external_location    = 's3://projeto-puc-energia-clima-2026/gold/fato_clima/',
+    external_location    = 's3://projeto-puc-energia-clima-2026-v2/gold/fato_clima/',
     partitioned_by       = ARRAY['year', 'month']
 ) AS
 SELECT

@@ -5,7 +5,7 @@ CREATE TABLE db_energia_clima_puc.gold_dim_usina
 WITH (
     format               = 'PARQUET',
     parquet_compression  = 'SNAPPY',
-    external_location    = 's3://projeto-puc-energia-clima-2026/gold/dim_usina/'
+    external_location    = 's3://projeto-puc-energia-clima-2026-v2/gold/dim_usina/'
 ) AS
 WITH capacidade AS (
     SELECT DISTINCT

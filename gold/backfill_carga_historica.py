@@ -6,7 +6,7 @@ import re
 # =============================================================================
 # Configurações
 # =============================================================================
-BUCKET         = 'projeto-puc-energia-clima-2026'
+BUCKET         = 'projeto-puc-energia-clima-2026-v2'
 PREFIX_SCRIPTS = 'gold/scripts/'
 ATHENA_RESULTS = f's3://{BUCKET}/athena-results/'
 DATABASE       = 'db_energia_clima_puc'

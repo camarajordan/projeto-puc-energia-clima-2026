@@ -5,7 +5,7 @@ CREATE TABLE db_energia_clima_puc.gold_bridge_clima_geracao
 WITH (
     format               = 'PARQUET',
     parquet_compression  = 'SNAPPY',
-    external_location    = 's3://projeto-puc-energia-clima-2026/gold/bridge_clima_geracao/',
+    external_location    = 's3://projeto-puc-energia-clima-2026-v2/gold/bridge_clima_geracao/',
     partitioned_by       = ARRAY['year', 'month']
 ) AS
 WITH

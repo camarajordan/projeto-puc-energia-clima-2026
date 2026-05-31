@@ -5,7 +5,7 @@ CREATE TABLE db_energia_clima_puc.gold_dim_tempo
 WITH (
     format               = 'PARQUET',
     parquet_compression  = 'SNAPPY',
-    external_location    = 's3://projeto-puc-energia-clima-2026/gold/dim_tempo/'
+    external_location    = 's3://projeto-puc-energia-clima-2026-v2/gold/dim_tempo/'
 ) AS
 WITH todas_datas AS (
     SELECT event_date FROM db_energia_clima_puc.silver_microdados

@@ -5,7 +5,7 @@ CREATE TABLE db_energia_clima_puc.gold_dim_localizacao
 WITH (
     format               = 'PARQUET',
     parquet_compression  = 'SNAPPY',
-    external_location    = 's3://projeto-puc-energia-clima-2026/gold/dim_localizacao/'
+    external_location    = 's3://projeto-puc-energia-clima-2026-v2/gold/dim_localizacao/'
 ) AS
 SELECT DISTINCT
     CAST(e.id_estacao  AS VARCHAR)  AS id_estacao,
