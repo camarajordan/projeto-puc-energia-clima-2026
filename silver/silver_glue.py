@@ -40,8 +40,8 @@ from pyspark.sql.types import DoubleType, IntegerType, StringType
 # ---------------------------------------------------------------------------
 # Caminhos S3
 # ---------------------------------------------------------------------------
-BUCKET_BASE = "s3://projeto-puc-energia-clima-2026"
-BUCKET_NAME  = "projeto-puc-energia-clima-2026"
+BUCKET_BASE = "s3://projeto-puc-energia-clima-2026-v2"
+BUCKET_NAME  = "projeto-puc-energia-clima-2026-v2"
 S3_CLIENT    = boto3.client("s3")
 
 # Bronze — fontes
